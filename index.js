@@ -13,7 +13,9 @@ var creds = {
     password: process.env.PASSWD
 };
 
-var now = new Date().toISOString().slice(0,10);
+// var now = new Date().toISOString().slice(0,10);
+
+var now = new Date().toISOString().replaceAll(":","-").split(".")[0]
 
 var ref = "";
 if (process.env.GITHUB_REF) {

@@ -15,7 +15,9 @@ var creds = {
 
 // var now = new Date().toISOString().slice(0,10);
 
-var now = new Date().toISOString().replaceAll(":","-").split(".")[0]
+var now = new Date().toISOString().replaceAll(":","-").split(".")[0];
+
+console.log(now);
 
 var ref = "";
 if (process.env.GITHUB_REF) {

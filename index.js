@@ -32,7 +32,7 @@ var fileOptions = {
 
 spsave(coreOptions, creds, fileOptions)
 .then(function(){
-    console.log('Success');
+    console.log('Success loggin');
 })
 .catch(function(err){
     process.exit(1);

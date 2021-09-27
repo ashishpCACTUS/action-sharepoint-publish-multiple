@@ -15,15 +15,17 @@ var creds = {
 
 // var now = new Date().toISOString().slice(0,10);
 var date = new Date();
+console.log("Log Date");
 
 console.log(date);
 
 var now = date.toISOString();
-console.log(now);
+console.log("ISO String " +  now);
+now = now.replace(new RegExp(':', 'g'), '-');
+console.log("New now " + now);
+now = now.split(".")[0];
 
-now = now.replaceAll(":","-").split(".")[0];
-
-console.log(now);
+console.log("Final now " + now);
 
 var ref = "";
 if (process.env.GITHUB_REF) {

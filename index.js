@@ -16,7 +16,10 @@ var creds = {
 // var now = new Date().toISOString().slice(0,10);
 var date = new Date();
 
-var now = date.toISOString()
+console.log(date);
+
+var now = date.toISOString();
+console.log(now);
 
 now = now.replaceAll(":","-").split(".")[0];
 

@@ -14,8 +14,11 @@ var creds = {
 };
 
 // var now = new Date().toISOString().slice(0,10);
+var date = new Date();
 
-var now = new Date().toISOString().replaceAll(":","-").split(".")[0];
+var now = date.toISOString()
+
+now = now.replaceAll(":","-").split(".")[0];
 
 console.log(now);
 
@@ -35,5 +38,6 @@ spsave(coreOptions, creds, fileOptions)
     console.log('Success loggin');
 })
 .catch(function(err){
+    console.log('Error loggin');
     process.exit(1);
 });
